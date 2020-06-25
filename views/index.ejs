@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products</title>
+  </head>
+  <body>
+    <form action="/products" method="POST">
+      <input type="text" placeholder="product" name="product" />
+      <input type="text" placeholder="price" name="price" />
+      <button type="submit">Submit</button>
+    </form>
+    <h2> Products </h2>
+    <ul class="quotes">
+    <% for(var i = 0; i < products.length; i++) {%>
+        <li class="quote">
+        <span><%= products[i].product %></span>:
+        <span><%= products[i].price %></span>
+        </li>
+    <% } %>
+    </ul>
+  </body>
+</html>
